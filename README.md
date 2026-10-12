@@ -1,6 +1,6 @@
 # Armada_SEMU
 
-[![Armada SEMU version 0.1.0-alpha.2](docs/version.svg)](CHANGELOG.md)
+[![Armada SEMU version 0.1.0-alpha.2](docs/version.svg)](CHANGELOG.md) ![Windows 10 compatible](docs/windows10.svg)
 
 A local Armada Online server emulator for the original game client. Python 3.10 or newer is required. All server dependencies are in the Python standard library; no pip packages or virtual environment are needed.
 
@@ -99,4 +99,5 @@ Live-client verification is required for the new client hooks: change a balance,
 All server source files and launchers are in `Server_Emulator`. Within that folder, `server.py` runs UDP and starts `admin.py`; `persistence.py` handles save/restore layouts and `fragments.py` handles bounded packet reassembly; `login.py` manages authentication and SQLite migrations; `protocol.py` implements packet encoding; `world.py` handles map entry and command relay. `Server_Emulator/data/maps.json` and `Server_Emulator/data/schema.sql` contain map metadata and the fresh database schema. Runtime logs are created in `Server_Emulator/logs/` and contain metadata rather than credentials. `.gitignore` excludes generated data and logs, including personal accounts, saves and backups; only `maps.json` and `schema.sql` are included from the data folder. Implementation notes are in [SAVE_PERSISTENCE.md](docs/SAVE_PERSISTENCE.md).
 
 Tests are in `Server_Emulator/tests/`. Run `test.bat` from `Server_Emulator`, or run `python -m unittest discover -s tests -t . -v` in that same folder. Tests cover packet handling, relay regressions, map entry, account CRUD, character changes, password compatibility, browser form protection, snapshot preservation, fragmented save/reload, delayed final saves and client patch signatures. Tests use temporary databases. To restore a backup, stop the server first, preserve the current database, and copy the selected backup over `Server_Emulator/data/accounts.sqlite3`.
+
 
