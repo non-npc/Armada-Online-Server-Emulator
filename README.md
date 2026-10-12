@@ -1,4 +1,4 @@
-# Armada_SEMU
+# Armada SEMU (Aramada Online Server Emulator)
 
 [![Armada SEMU version 0.1.0-alpha.2](docs/version.svg)](CHANGELOG.md) ![Windows 10 compatible](docs/windows10.svg)
 
