@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated server data: only public runtime definitions belong in Git
+/Server_Emulator/data/*
+!/Server_Emulator/data/maps.json
+!/Server_Emulator/data/schema.sql
+/Server_Emulator/logs/
+
+# Protect any leftover runtime folders from the previous layout
+/data/
+/logs/
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+*.tmp
+
+# Reversible patched-client backups
+Patched_Client/backups/
